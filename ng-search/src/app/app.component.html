@@ -1,0 +1,11 @@
+<input type="text" (keyup)="onChange($event)" />
+
+<div *ngIf="usersList$ | async as data">
+  <table>
+    <tr *ngFor="let user of data.users; let i = index; ">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.maidenName }}</td>
+    </tr>
+  </table>
+</div>
